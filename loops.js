@@ -106,10 +106,10 @@ for(let i = 0; i < 100; i++) {
     const dividesByFive = i % 5 === 0;
 
     if (dividesByThree) {
-        outputString += "Fizz"
+        outputString += "Fizz";
     }
     if (dividesByFive) {
-        outputString += "Buzz"
+        outputString += "Buzz";
     }
     if (!dividesByThree && !dividesByFive) {
         outputString = i.toString();
