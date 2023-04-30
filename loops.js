@@ -10,10 +10,11 @@
 // Tip: je kunt de .repeat() methode gebruiken om een karakter een n aantal keer te herhalen...
 // Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
+for(let i = 1; i < 6; i++) {
+    let str = "*";
 
-
-
-
+    console.log(str.repeat(i));
+}
 
 // ==========================================
 // Opdracht 2. Maak een for-loop die 4 keer het woord "loop..." logt, en bij de laatste (vijfde) loop het woord "klaar!"
@@ -24,10 +25,15 @@
 // loop...
 // klaar!
 // ==========================================
+const loopLength = 5;
 
-
-
-
+for(let i = 0; i < loopLength; i++) {
+    if (i < (loopLength - 1)) {
+        console.log("loop...");
+    } else {
+        console.log("klaar!");
+    }
+}
 
 // ==========================================
 // Opdracht 3: maak een for-loop die van 0 tot 9 loopt en de getallen 0 tot 9 logt.
@@ -44,10 +50,17 @@
 // >> 8
 // >> 9
 // ==========================================
-
-
-
-
+for(let i = 0; i < 10; i++) {
+    if (i < 3) {
+        console.log(i.toString());
+    }
+    if (i >= 3 && i < 6) {
+        console.log(">" + i);
+    }
+    if (i >= 6) {
+        console.log(">>" + i);
+    }
+}
 
 // ==========================================
 // Opdracht 4 (BONUS): schrijf een for-loop die van 0 tot 100 loopt en de getallen print.
@@ -86,6 +99,23 @@
 // FizzBuzz
 // etc.
 // ==========================================
+for(let i = 0; i < 100; i++) {
+    let outputString = "";
 
+    const dividesByThree = i % 3 === 0;
+    const dividesByFive = i % 5 === 0;
+
+    if (dividesByThree) {
+        outputString += "Fizz";
+    }
+    if (dividesByFive) {
+        outputString += "Buzz";
+    }
+    if (!dividesByThree && !dividesByFive) {
+        outputString = i.toString();
+    }
+
+    console.log(outputString);
+}
 
 
